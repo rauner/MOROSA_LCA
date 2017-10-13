@@ -109,7 +109,7 @@ while(x <= ncol(A.technology.final.technology.list.fixed))
     if(rownames(A.technology.final.technology.list.fixed)[y] == colnames(A.technology.final.technology.list.fixed)[x])
     { f_fixed_unit[y,x]  <- 1
       f_fixed_kW[y,x]    <- A.technology.final.technology.list.fixed[y,x]/technology.list.fixed[colnames(A.technology.final.technology.list.fixed)[x],"amount_fixed"]
-      #varibale process to fixed process mapping with Typ
+      #variable process to fixed process mapping with typ
       process_variable<- technology.list.fixed[rownames(A.technology.final.technology.list.fixed)[y],"Typ"]
       z<-1
       while(z <= nrow(technology.list.variable))
@@ -137,7 +137,7 @@ while(x <= ncol(A.technology.final.technology.list.fixed))
 
 #insert one row at position 2
 #go through the columns and fill with mapping process
-# if name = name_mapping dann mapping
+# if name = name_mapping then mapping
 
 x<-1
 while(x <= ncol(A.technology.final.technology.list.variable))
